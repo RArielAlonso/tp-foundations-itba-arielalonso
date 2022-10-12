@@ -1,0 +1,14 @@
+version: '1.5'
+
+services:
+
+  postgres-db:
+    build: ./database/
+    ports:
+      - 5432:5432
+    networks:
+      - nt-pizza
+
+networks:
+  nt-pizza:
+    driver: bridge
