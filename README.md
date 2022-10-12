@@ -16,9 +16,13 @@ Se analizara el funcionamiento de una pizza de la cual tenemos datos de alrededo
 ## Preguntas de negocio
 
 1- ¿Cual es la facturacion mensual y anual?
+
 2- ¿Qué pizza es la que genera mayor ingreso y ventas?
+
 3- ¿Qué categoria es la que genera mayor ingreso y ventas?
+
 4- ¿Cual dia de la semana y hora se venden mayor cantidad de pizzas?
+
 5- ¿Que tipo de pizza y que tamaño es la que mayor ventas tiene? 
 
 
