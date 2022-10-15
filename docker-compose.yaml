@@ -6,6 +6,7 @@ services:
     build: ./database/
     ports:
       - 5432:5432
+    container_name: postgres-db-pizza
     networks:
       - nt-pizza
 

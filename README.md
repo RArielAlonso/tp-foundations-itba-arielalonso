@@ -89,7 +89,7 @@ Se analizara el funcionamiento de una pizza de la cual tenemos datos de alrededo
 
 ## Diagrama de ER
 
-![Diagrama-er](/Resources/diagrama-ER.png)
+![Diagrama-ER](Resources\diagrama-ER.JPG)
 
 ## Preguntas de negocio
 
