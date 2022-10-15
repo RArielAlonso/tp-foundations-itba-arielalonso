@@ -1,4 +1,5 @@
 FROM postgres:12.12-alpine
+
 ENV POSTGRES_PASSWORD=ITBA
 ENV POSTGRES_USER=aalonso
 ENV POSTGRES_DB=database_pizza
