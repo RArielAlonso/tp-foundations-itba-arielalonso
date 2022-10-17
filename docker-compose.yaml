@@ -2,25 +2,23 @@ version: '1.5'
 
 services:
 
-  postgres-db:
+  db:
     build: 
       context: ./database/
       dockerfile: Dockerfile
     ports:
-      - 5432:5432
+      - "5432:5432"
     expose:
       - 5432
     environment:
       - POSTGRES_USER=aalonso
       - POSTGRES_PASSWORD=ITBA
-    container_name: postgres-db-pizza
+    container_name: postgres-db
     hostname: postgres-db
     volumes:
-      #- ./postgres-data:/var/lib/postgresql/data
+      - ./postgres-data:/var/lib/postgresql/data
       - ./database/sql:/sql
-    networks:
-      - nt-pizza
 
 networks:
-  nt-pizza:
-    driver: bridge
+  default:
+    name: nt-pizza
