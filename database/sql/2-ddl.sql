@@ -28,7 +28,7 @@ create table schema_pizza.pizzas (
     pizza_id VARCHAR(20) NOT NULL,
     pizza_type_id VARCHAR(20),
     size VARCHAR(20),
-    price FLOAT,
+    price NUMERIC,
     PRIMARY KEY (pizza_id),
     CONSTRAINT fk_pizzas
     FOREIGN KEY (pizza_type_id) REFERENCES schema_pizza.pizza_types(pizza_type_id)
