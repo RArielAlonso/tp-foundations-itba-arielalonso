@@ -75,6 +75,7 @@ Este script de reporting debe correrse mediante una imagen de Docker con `docker
 
 Agregue una sección al README.md comentando como resolvió los ejercicios, linkeando al archivo con la descripción del dataset y explicando como ejecutar un script de BASH para ejecutar todo el proceso end2end desde la creación del container, operaciones de DDL, carga de datos y consultas. Para esto crear el archivo de BASH correspondiente. 
 
+***
 
 # Dataset Pizzeria Alonso
 
@@ -103,4 +104,18 @@ Se analizara el funcionamiento de una pizza de la cual tenemos datos de alrededo
 
 5- ¿Que tipo de pizza y que tamaño es la que mayor ventas tiene? 
 
+
+ ---
+
+# Ejecucion del proceso ETL + Reporting
+
+En el siguiente apartado encontrará las instrucciones para correr el proceso tanto de forma individual por proceso como de forma general con un script bash generico.
+
+**Importante: la ruta donde se ejecutan los comandos debe ser la principal de donde se encuentran los archivos**
+
+1. Levantar la base de datos de Postgres
+
+Para levantar la base de datos de postgres, solamente hay que ejecutar la siguiente linea de codigo
+
+`docker-compose up`
 
