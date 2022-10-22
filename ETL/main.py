@@ -44,4 +44,4 @@ for k,v in csv_dict.items():
         )
 conn.close()
 print('Closing connection to Database')
-print('LOADED DATA TO DB ENDED')
+print('LOAD DATA TO DB ENDED')

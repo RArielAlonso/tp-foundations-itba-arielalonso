@@ -115,7 +115,73 @@ En el siguiente apartado encontrará las instrucciones para correr el proceso ta
 
 1. Levantar la base de datos de Postgres
 
-Para levantar la base de datos de postgres, solamente hay que ejecutar la siguiente linea de codigo
+Para levantar la base de datos de postgres, solamente hay que ejecutar la siguiente linea de codigo.
 
 `docker-compose up`
+
+Este codigo levanta el docker compose que genera la base datos postgres a partir de la creacion de un container, los detalles son los siguientes:
+
+- postgres:12.12-alpine
+- copia el archivo data_tables.sh a la carpeta /usr/local/bin
+
+Este ultimo paso se opto por copiar el archivo y posteriormente dentro del contenedor ejecutar la creacion de las tablas, este script permite el borrado en cascada de la base de datos por si es necesario recargarla por algun motivo.
+
+Detalles de la base de datos creada:
+
+- POSTGRES_SCHEMA='schema_pizza'
+- POSTGRES_HOST="postgres-db"
+- POSTGRES_DB='database_pizza'
+
+
+2. Script para la creacion de tablas de la base de datos
+
+Como vimos en el paso anterior el archivo data_tables.sh fue enviado a la carpeta /usr/local/bin dentro del contenedor, para ejecutar el mismo alcanza con ejecutar la siguiente linea:
+
+`docker exec -it postgres-db bash /usr/local/bin/data_tables.sh`
+
+Este paso solamente elimina los datos y tablas de la base de datos para posteriormente crearlas nuevamente.
+
+3. Popular la base datos
+
+Para este paso se genero un script de Python dentro de la carpeta /ETL, el cual se ejecuta mediante un contenedor con las siguientes librerias
+
+- pandas
+- openpyxl
+- sqlalchemy
+- psycopg2-binary
+
+El mismo lee los csv que estan montados localmente en la ruta /ETL/csv_files y a traves de un volumen con el contenedor lee los mismos para posteriormente subirlos a la base de datos.
+
+Para ejecutar este contenedor:
+
+`docker run -it --rm --network nt-pizza -v $PWD/ETL/csv_files:/csv_files test-tp`
+
+4. Consultas a base de datos
+
+Dentro de un archivo python(queries.py) se crearon las queries correspondientes que se utilizaran para generar los dataframes con los caules se generaran los reportes tanto por pantalla como en graficos.
+
+Librerias utilizadas:
+- pandas
+- openpyxl
+- sqlalchemy
+- psycopg2-binary
+- seaborn
+- matplotlib
+
+Para los graficos se utilizo la libreria seaborn y a traves de un volumen generado al correr el contenedor se va a permitir acceder a los mismos localmente.
+
+El comando para ejecutar este paso es el siguiente:
+
+`docker run -it --rm --network nt-pizza -v $PWD/Reports/graphs:/graphs reports-test`
+
+Los graficos generados estan almacenados en la ruta /Reports/Graphs
+
+* *   
+
+# END TO END
+
+Para ejectuar el proceso end2end se genero un sript de bash(end2end.sh) en el cual se ejecuta todo el proceso desde un solo paso
+
+
+
 
