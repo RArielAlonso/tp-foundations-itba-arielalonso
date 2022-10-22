@@ -101,6 +101,4 @@ Se analizara el funcionamiento de una pizza de la cual tenemos datos de alrededo
 
 4- ¿Cual dia de la semana y hora se venden mayor cantidad de pizzas?
 
-5- ¿Que tipo de pizza y que tamaño es la que mayor ventas tiene? 
-
 
