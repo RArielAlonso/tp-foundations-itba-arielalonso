@@ -176,7 +176,7 @@ El comando para ejecutar este paso es el siguiente:
 
 Los graficos generados estan almacenados en la ruta /Reports/Graphs
 
-* *   
+***
 
 # END TO END
 
