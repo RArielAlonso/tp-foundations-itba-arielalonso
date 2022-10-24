@@ -74,10 +74,7 @@ Este script de reporting debe correrse mediante una imagen de Docker con `docker
 ## Ejercicio 6: Documentación y ejecución end2end
 
 Agregue una sección al README.md comentando como resolvió los ejercicios, linkeando al archivo con la descripción del dataset y explicando como ejecutar un script de BASH para ejecutar todo el proceso end2end desde la creación del container, operaciones de DDL, carga de datos y consultas. Para esto crear el archivo de BASH correspondiente. 
-<<<<<<< HEAD
-=======
 
-***
 
 # Dataset Pizzeria Alonso
 
@@ -191,4 +188,3 @@ En este paso se ejecutan los pasos del pipeline siguiendo el orden establecido a
 Nota: Tambien el proceso espera a que se generen las distintas images de los contenedores en caso de que no esten generadas.
 
 
->>>>>>> 2-ejercicio-2
