@@ -160,7 +160,7 @@ fig=sns.barplot(data=df_category_sales.head(10),
             #color='blue',
             #hue='year',
             )
-plt.title('Categories Revenue',fontsize=20)
+plt.title('Categories Sales',fontsize=20)
 plt.xlabel('Category name')
 plt.ylabel('Total Orders')
 plt.tight_layout()
