@@ -182,6 +182,10 @@ Los graficos generados estan almacenados en la ruta /Reports/Graphs
 
 Para ejectuar el proceso end2end se genero un sript de bash(end2end.sh) en el cual se ejecuta todo el proceso desde un solo paso
 
+`bash end2end.sh `
 
+En este paso se ejecutan los pasos del pipeline siguiendo el orden establecido anteriormente.
+
+Nota: Tambien el proceso espera a que se generen las distintas images de los contenedores en caso de que no esten generadas.
 
 

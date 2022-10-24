@@ -43,7 +43,7 @@ docker run --rm --network nt-pizza -v $PWD/Reports/graphs:/graphs report-image &
 PID=$!
 wait $PID
 
-read -p "Want to END the connection to postgres Database? \n Type yes (it is case sensitive) " confirmation
+read -p "Want to END the connection to postgres Database? Type yes (it is case sensitive) " confirmation
 if [ "$confirmation" = "yes" ]
 then
     docker-compose down
