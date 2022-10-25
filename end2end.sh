@@ -5,7 +5,7 @@ echo "-------------------------------------------"
 echo "Restarting the container of the database"
 echo "-------------------------------------------"
 
-docker-compose up -d && sleep 20
+docker-compose up -d
 PID=$!
 wait $PID
 
