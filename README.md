@@ -190,7 +190,11 @@ Nota: Tambien el proceso espera a que se generen las distintas images de los con
 # Potenciales mejoras
 
 1- Agregar archivos de configuracion para las contraseñas
+
 2- Presentar en un servidor web los graficos
+
 3- Integrar todo en docker-compose
+
+4- Generar clases y funciones para reducir codigo
 
 
