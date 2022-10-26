@@ -197,4 +197,6 @@ Nota: Tambien el proceso espera a que se generen las distintas images de los con
 
 4- Generar clases y funciones para reducir codigo
 
+5- Agregar logging
+
 
